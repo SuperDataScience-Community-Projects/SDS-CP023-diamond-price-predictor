@@ -1,0 +1,18 @@
+# Unified Requirements
+
+# Core Libraries
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+
+# Additional Libraries
+joblib
+flask
+pyyaml
+plotly
+xgboost
+
+# Ensure all dependencies are listed without duplication.
+
