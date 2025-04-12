@@ -3,6 +3,32 @@
 # 🌟 Simple Diamond Price Prediction App
 # Based on a trained regression model that expects scaled inputs
 
+import os
+import pickle
+
+# Get the directory where this script is located
+current_dir = os.path.dirname(__file__)
+
+# Build the full path to the scaler file and load it
+scaler_path = os.path.join(current_dir, "scaler.pkl")
+with open(scaler_path, "rb") as scaler_file:
+    scaler = pickle.load(scaler_file)
+print("Scaler loaded successfully from:", scaler_path)
+
+# Build the full path to the final model file and load it
+model_path = os.path.join(current_dir, "diamond_price_model.pkl")
+with open(model_path, "rb") as model_file:
+    model = pickle.load(model_file)
+print("Model loaded successfully from:", model_path)
+
+# Build the full path to the PowerTransformer file and load it
+pt_path = os.path.join(current_dir, "power_transformer.pkl")
+with open(pt_path, "rb") as pt_file:
+    pt = pickle.load(pt_file)
+print("PowerTransformer loaded successfully from:", pt_path)
+
+
+
 import streamlit as st
 import pandas as pd
 import numpy as np
